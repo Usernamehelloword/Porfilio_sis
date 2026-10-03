@@ -20,7 +20,10 @@ RUN npm run build
 # ==========================================
 # Stage 2: Production PHP Application
 # ==========================================
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
+
+# Set environment variables for non-interactive builds
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Set working directory
 WORKDIR /var/www/html
@@ -78,7 +81,8 @@ RUN composer install \
     --no-interaction \
     --no-scripts \
     --no-autoloader \
-    --prefer-dist
+    --prefer-dist \
+    --ignore-platform-req=php
 
 # Copy application code
 COPY . .
