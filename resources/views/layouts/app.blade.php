@@ -19,6 +19,11 @@
 
     <link rel="icon" href="{{ \App\Support\Settings::get('favicon') ? \App\Support\Content::imageUrl(\App\Support\Settings::get('favicon')) : asset('image/logo_1.png') }}" type="image/png">
 
+    {{-- Typography: Playfair Display & Inter --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Appearance settings managed from the admin panel (light mode only; dark mode uses the gradient system) --}}
@@ -58,7 +63,7 @@
             @if (\App\Support\Settings::get('logo'))
                 <img src="{{ \App\Support\Content::imageUrl(\App\Support\Settings::get('logo')) }}" alt="{{ \App\Support\Settings::get('studio_name') }}" class="nav-logo-img">
             @else
-                <img src="{{ asset('image\logo2.png') }}" alt="{{ \App\Support\Settings::get('studio_name') }}" class="nav-logo-img">
+                <img src="{{ asset('image/logo2.png') }}" alt="{{ \App\Support\Settings::get('studio_name') }}" class="nav-logo-img">
             @endif
             <span>{{ \App\Support\Settings::get('site_name') }}</span>
         </a>
@@ -114,7 +119,7 @@
                     @if (\App\Support\Settings::get('logo'))
                         <img src="{{ \App\Support\Content::imageUrl(\App\Support\Settings::get('logo')) }}" alt="{{ \App\Support\Settings::get('studio_name') }} logo" class="foot-logo-img">
                     @else
-                        <img src="{{ asset('image/logo_2.png') }}" alt="{{ \App\Support\Settings::get('studio_name') }} logo" class="foot-logo-img">
+                        <img src="{{ asset('image/logo2.png') }}" alt="{{ \App\Support\Settings::get('studio_name') }} logo" class="foot-logo-img">
                     @endif
                     {{ \App\Support\Settings::get('site_name') }}
                 </span>

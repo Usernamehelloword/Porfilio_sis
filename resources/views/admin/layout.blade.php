@@ -7,6 +7,9 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>@yield('title', 'Dashboard') — Studio Volume Admin</title>
     <link rel="icon" href="{{ \App\Support\Settings::get('favicon') ? \App\Support\Content::imageUrl(\App\Support\Settings::get('favicon')) : asset('image/logo_1.png') }}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     @vite(['resources/css/admin.css', 'resources/js/admin.js'])
 </head>
 <body class="admin-body {{ session('sidebar_collapsed') ? '' : '' }}">
