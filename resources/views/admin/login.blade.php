@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Sign in — Studio Volume Admin</title>
     <link rel="icon" href="{{ asset('image/logo_1.png') }}" type="image/png">
     @vite(['resources/css/admin.css', 'resources/js/admin.js'])

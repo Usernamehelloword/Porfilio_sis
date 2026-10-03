@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>@yield('title', 'Dashboard') — Studio Volume Admin</title>
     <link rel="icon" href="{{ \App\Support\Settings::get('favicon') ? \App\Support\Content::imageUrl(\App\Support\Settings::get('favicon')) : asset('image/logo_1.png') }}" type="image/png">
     @vite(['resources/css/admin.css', 'resources/js/admin.js'])
